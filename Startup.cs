@@ -13,8 +13,10 @@ namespace aspnetcoreapp
             services.AddMvc();
         }
  
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         { 
+        		app.UseDeveloperExceptionPage();
+
             app.UseMvc(routes =>
 					{
 					    routes.MapRoute(
